@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Food Recommendation</h1>
+        <p id="food-display">Click the button to get a recommendation!</p>
+        <button onclick="recommendFood()">Get Recommendation</button>
+    </div>
+
+    <script>
+        const foods = [
+            "Pizza",
+            "Sushi",
+            "Pasta",
+            "Burgers",
+            "Salad",
+            "Tacos",
+            "Ramen",
+            "Steak",
+            "Ice Cream",
+            "Smoothie"
+        ];
+
+        function recommendFood() {
+            const randomIndex = Math.floor(Math.random() * foods.length);
+            document.getElementById("food-display").textContent = `How about some ${foods[randomIndex]}?`;
+        }
+    </script>
+</body>
+</html>
